@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walmart_examenl</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #0040ff;
+            color: white;
+            padding: 05px;
+            text-align: center;
+        }
+        nav {
+            background-color: #0030cc;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #0040ff;  
+            color: white;
+            padding: 4px;odificado de 7px a 5px */
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 5px 0;
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: white;
+        }
+        li:nth-child(1) { background-color: #33cc35; } 
+        li:nth-child(2) { background-color: #9900ff; } 
+        li:nth-child(3) { background-color: #ff9933; } 
+        li:nth-child(4) { background-color: #ff3399; } 
+        li:nth-child(5) { background-color: #ffff00; } 
+        li:nth-child(6) { background-color: #ffff00; } 
+        li:nth-child(7) { background-color: #ff3399; } 
+        li:nth-child(8) { background-color: #ff9933; } 
+        li:nth-child(9) { background-color: #9900ff; } 
+        li:nth-child(10) { background-color: #33cc35; } 
+        
+        /* Estilos para el pie de página */
+        footer {
+            background-color: #0040ff;
+            color: white;
+            padding: 5px; /* Modificado de 10px a 5px */
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Walmart</h1>
+        <p> <span style="color: pink;">Bienvenido A Nuestro Sitio En Línea</span>.</p>
+    </header>
+    <nav>
+        <a href="#productos"> <span style="color: purple;">Productos</span></a> |
+        <a href="#servicios"> <span style="color: purple ">Servicios</span></a> |
+        <a href="#promociones"> <span style="color: purple ">Promociones</span></a> |
+        <a href="#sucursales"> <span style="color: purple "> Sucursales</span></a>
+    </nav>
+    <section id="productos">
+        <h2 id="titulo-productos">Productos</h2>
+        <ul>
+            <li>Encuentra en este botón los <a href="https://super.walmart.com.mx/search?q=lacteos">lácteos</a></li>
+            <li>Encuentra en este botón los  <a href="https://super.walmart.com.mx/search?q=electrodomesticos&typeahead=ele">Electrodomésticos</a></li>
+            <li>Encuentra en este botón todo acerca de los <a href="https://super.walmart.com.mx/search?q=sonido&typeahead=soni">Equipos De Sonido</a></li>
+            <li>Encuentra en este botón todo acerca de <a href="https://super.walmart.com.mx/search?q=ropa%20de%20nino&typeahead=ropa%20de%20n">Ropa De Niño</a></li>
+            <li>Encuentra en este botón todo acerca de <a href="https://super.walmart.com.mx/search?q=ropa%20de%20hombre&typeahead=ropa%20de%20">Ropa Para Adulto</a></li>
+            <li>Encuentra en este botón todo acerca de <a href="https://super.walmart.com.mx/search?q=ropa%20de%20hombre&typeahead=ropa%20de%20">Deportes</a></li>
+            <li>Encuentra en este botón todo acerca de <a href="https://super.walmart.com.mx/search?q=carne&typeahead=carne">Cremería</a></li>
+            <li>Encuentra en este botón todo acerca de <a href="https://super.walmart.com.mx/search?q=farmacia">Farmacia</a></li>
+            <li>Encuentra en este botón todo acerca de <a href="https://super.walmart.com.mx/tu-cuenta/iniciar-sesion?vid=oaoh&tid=0&returnUrl=%2Ftu-cuenta%2Fpedidos">Pedidos En Linea Y PickUp</a></li>
+        </ul>
+    </section>
+    <section id="servicios">
+        <h2>Servicios</h2>
+        <ul>
+            <li>Servicio de atención al cliente</li>
+            <li>Servicio de cajas</li>
+            <li>Servicio de carritos y cestas</li>
+            <li>Servicio de entrega a domicilio</li>
+        </ul>
+    </section>
+    <section id="promociones">
+        <h2>Promociones</h2>
+        <p> <span style="color: red;">En la compra de Dos Aceites, llevate gratis el tercero</span>.</p>
+        <img src="imagenes/aceites.jpg" />
+        <p> <span style="color: purple;">Compra 1000 pesos en efectivo y llevate un descuento sorpresa</span>.</p>
+        <img src="imagenes/imagen_desc.jpg" />
+    </section>
+    <section id="sucursales">
+        <h2>Sucursales</h2>
+        <p>Ubica nuestras sucursal más cercana en los siguientes vínculos: <a href="https://www.walmart.com.mx">Walmart slp</a>.</p>
+    </section>
+    <footer>
+        <p>&copy; Walmart derechos reservados</p>
+    </footer>
+</body>
+</html>
