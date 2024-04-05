@@ -1,0 +1,80 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.registro {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px; /* Ancho máximo para evitar que el formulario sea demasiado ancho */
+  width: 100%; /* Para que el formulario no exceda el ancho máximo */
+}
+
+.registro h2 {
+  margin-top: 0;
+}
+
+.registro .input-group {
+  margin-bottom: 15px;
+}
+
+.registro input[type="text"],
+.registro input[type="email"] {
+  width: calc(100% - 22px); /* Restamos 22px para tener en cuenta el padding y el borde */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.registro input[type="text"]:focus,
+.registro input[type="email"]:focus {
+  outline: none;
+  border-color: #66afe9;
+  box-shadow: 0 0 5px rgba(102, 175, 233, 0.5);
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.registro {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px; /* Ancho máximo para evitar que el formulario sea demasiado ancho */
+  width: 100%; /* Para que el formulario no exceda el ancho máximo */
+}
+
+.registro h2 {
+  margin-top: 0;
+}
+
+.registro .input-group {
+  margin-bottom: 15px;
+}
+
+.registro input[type="text"],
+.registro input[type="email"] {
+  width: calc(100% - 22px); /* Restamos 22px para tener en cuenta el padding y el borde */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.registro input[type="text"]:focus,
+.registro input[type="email"]:focus {
+  outline: none;
+  border-color: #66afe9;
+  box-shadow: 0 0 5px rgba(102, 175, 233, 0.5);
+}
