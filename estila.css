@@ -1,0 +1,17 @@
+.tabla {
+    display: flex;
+    justify-content: space-between;
+    margin: 1cm;
+}
+
+.tabla > div {
+    width: calc(20% - 1cm);
+    background-color: pink;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#info {
+    margin: 1cm;
+}
