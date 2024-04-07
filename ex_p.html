@@ -4,17 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabla con Recuadros Interactivos</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .tabla {
+            display: flex;
+            justify-content: space-between;
+            margin: 1cm auto;
+            width: 50%;
+        }
+
+        .tabla > div {
+            width: calc(20% - 1cm);
+            background-color: pink;
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Transición suave */
+        }
+
+        .tabla > div:hover {
+            background-color: lightpink; /* Cambio de color al pasar el mouse */
+        }
+
+        #info {
+            margin: 1cm auto;
+            width: 50%;
+        }
+
+        .formulario {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1cm;
+            width: 100%;
+            background-color: lightgray;
+            padding: 10px;
+        }
+
+        .formulario input[type="text"],
+        .formulario input[type="password"] {
+            margin-right: 10px;
+        }
+
+        footer {
+            background-color: orsa; /* Color de fondo del pie de página */
+            color: white; /* Color del texto */
+            text-align: center;
+            padding: 20px 0; /* Espaciado interno */
+        }
+    </style>
 </head>
 <body>
     <div class="tabla">
-        <div class="titulo">Título</div>
-        <div class="practica">Práctica 1</div>
-        <div class="practica">Práctica 2</div>
-        <div class="practica">Práctica 3</div>
-        <div class="portafolio">Portafolio</div>
+        <div class="titulo" contenteditable="false">Información del Título</div>
+        <div class="practica" contenteditable="true">Información de la Práctica 1</div>
+        <div class="practica" contenteditable="true">Información de la Práctica 2</div>
+        <div class="practica" contenteditable="true">Información de la Práctica 3</div>
+        <div class="portafolio" contenteditable="true">Información del Portafolio</div>
     </div>
 
     <div id="info">Lorem</div>
+
+    <footer>Pie de página</footer>
+
+    <script>
+        function lorem() {
+            return "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum metus a turpis hendrerit, nec consequat leo vehicula. Sed in quam auctor, fermentum libero eget, feugiat magna. Phasellus nec est eu orci laoreet rhoncus. Nullam mattis libero ac arcu convallis, sit amet vestibulum tortor ultricies. Phasellus gravida tellus nec dolor ullamcorper malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc in sapien in mauris congue vulputate nec vel velit. Nullam interdum urna nec libero tincidunt, et bibendum ipsum rutrum. Vestibulum vestibulum nunc vitae neque dictum, non ultrices elit venenatis. Phasellus ultricies, lectus vel volutpat elementum, purus purus lobortis odio, vitae vulputate nunc orci et lorem. Nulla sagittis lorem quis hendrerit bibendum. Vivamus viverra turpis ac sem elementum, nec fermentum velit luctus. Aenean vehicula posuere purus, ac hendrerit enim posuere at.";
+        }
+
+        document.querySelectorAll('.practica').forEach(element => {
+            element.addEventListener('click', () => {
+                var index = Array.prototype.indexOf.call(element.parentElement.children, element);
+                var info = "";
+
+                for (var i = index; i < index + 3; i++) {
+                    info += lorem() + "\n";
+                }
+
+                document.getElementById('info').innerText = info.trim();
+            });
+        });
+    </script>
+
+    <div class="formulario">
+        <form action="#">
+            <div>
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
 </body>
 </html>

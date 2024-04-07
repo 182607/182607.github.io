@@ -1,17 +1,66 @@
-.tabla {
-    display: flex;
-    justify-content: space-between;
-    margin: 1cm;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla con Recuadros Interactivos</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
 
-.tabla > div {
-    width: calc(20% - 1cm);
-    background-color: pink;
-    text-align: center;
-    padding: 10px;
-    cursor: pointer;
-}
+        .tabla {
+            display: flex;
+            justify-content: space-between;
+            margin: 1cm auto;
+            width: 50%;
+        }
 
-#info {
-    margin: 1cm;
-}
+        .tabla > div {
+            width: calc(20% - 1cm);
+            background-color: pink;
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        #info {
+            margin: 1cm auto;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="tabla">
+        <div class="titulo" contenteditable="false">Información del Título</div>
+        <div class="practica" contenteditable="true">Información de la Práctica 1</div>
+        <div class="practica" contenteditable="true">Información de la Práctica 2</div>
+        <div class="practica" contenteditable="true">Información de la Práctica 3</div>
+        <div class="portafolio" contenteditable="true">Información del Portafolio</div>
+    </div>
+
+    <div id="info">Lorem</div>
+
+    <script>
+        function lorem() {
+            return "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum metus a turpis hendrerit, nec consequat leo vehicula. Sed in quam auctor, fermentum libero eget, feugiat magna. Phasellus nec est eu orci laoreet rhoncus. Nullam mattis libero ac arcu convallis, sit amet vestibulum tortor ultricies. Phasellus gravida tellus nec dolor ullamcorper malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc in sapien in mauris congue vulputate nec vel velit. Nullam interdum urna nec libero tincidunt, et bibendum ipsum rutrum. Vestibulum vestibulum nunc vitae neque dictum, non ultrices elit venenatis. Phasellus ultricies, lectus vel volutpat elementum, purus purus lobortis odio, vitae vulputate nunc orci et lorem. Nulla sagittis lorem quis hendrerit bibendum. Vivamus viverra turpis ac sem elementum, nec fermentum velit luctus. Aenean vehicula posuere purus, ac hendrerit enim posuere at.";
+        }
+
+        document.querySelectorAll('.practica').forEach(element => {
+            element.addEventListener('click', () => {
+                var index = Array.prototype.indexOf.call(element.parentElement.children, element);
+                var info = "";
+
+                for (var i = index; i < index + 3; i++) {
+                    info += lorem() + "\n";
+                }
+
+                document.getElementById('info').innerText = info.trim();
+            });
+        });
+    </script>
+</body>
+</html>
