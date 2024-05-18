@@ -1,66 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabla con Recuadros Interactivos</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
 
-        .tabla {
-            display: flex;
-            justify-content: space-between;
-            margin: 1cm auto;
-            width: 50%;
-        }
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
 
-        .tabla > div {
-            width: calc(20% - 1cm);
-            background-color: pink;
-            text-align: center;
-            padding: 10px;
-            cursor: pointer;
-        }
+h1 {
+    margin-bottom: 20px;
+    color: #4CAF50;
+}
 
-        #info {
-            margin: 1cm auto;
-            width: 50%;
-        }
-    </style>
-</head>
-<body>
-    <div class="tabla">
-        <div class="titulo" contenteditable="false">Información del Título</div>
-        <div class="practica" contenteditable="true">Información de la Práctica 1</div>
-        <div class="practica" contenteditable="true">Información de la Práctica 2</div>
-        <div class="practica" contenteditable="true">Información de la Práctica 3</div>
-        <div class="portafolio" contenteditable="true">Información del Portafolio</div>
-    </div>
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    <div id="info">Lorem</div>
+label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
 
-    <script>
-        function lorem() {
-            return "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum metus a turpis hendrerit, nec consequat leo vehicula. Sed in quam auctor, fermentum libero eget, feugiat magna. Phasellus nec est eu orci laoreet rhoncus. Nullam mattis libero ac arcu convallis, sit amet vestibulum tortor ultricies. Phasellus gravida tellus nec dolor ullamcorper malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc in sapien in mauris congue vulputate nec vel velit. Nullam interdum urna nec libero tincidunt, et bibendum ipsum rutrum. Vestibulum vestibulum nunc vitae neque dictum, non ultrices elit venenatis. Phasellus ultricies, lectus vel volutpat elementum, purus purus lobortis odio, vitae vulputate nunc orci et lorem. Nulla sagittis lorem quis hendrerit bibendum. Vivamus viverra turpis ac sem elementum, nec fermentum velit luctus. Aenean vehicula posuere purus, ac hendrerit enim posuere at.";
-        }
+input[type="text"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
 
-        document.querySelectorAll('.practica').forEach(element => {
-            element.addEventListener('click', () => {
-                var index = Array.prototype.indexOf.call(element.parentElement.children, element);
-                var info = "";
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-                for (var i = index; i < index + 3; i++) {
-                    info += lorem() + "\n";
-                }
+button:hover {
+    background-color: #45a049;
+}
 
-                document.getElementById('info').innerText = info.trim();
-            });
-        });
-    </script>
-</body>
-</html>
+p#resultado {
+    margin-top: 20px;
+    font-weight: bold;
+}
