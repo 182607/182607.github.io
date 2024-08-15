@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo del Zapato</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #0056b3;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .intro, .section, .gallery, .blog, .contact {
+            background: white;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .intro img, .gallery img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        footer {
+            background-color: #0056b3;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+              height: 20px; /* Ajusta la altura del pie de página */
+  line-height: 18px; /
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .form-group textarea {
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mundo del Zapato</h1>
+        <nav>
+            <ul>
+                <li><a href="#intro">Inicio</a></li>
+                <li><a href="#historia">Historia</a></li>
+                <li><a href="#tipos">Tipos de Calzado</a></li>
+                <li><a href="#guia">Guía de Tallas</a></li>
+                <li><a href="#cuidado">Consejos de Cuidado</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="intro" class="intro">
+            <h2>Bienvenido al Mundo del Zapato</h2>
+            <img src="images/intro.jpg" alt="Imagen de Calzado">
+            <p>¡Explora el fascinante mundo del calzado con nosotros! Desde la historia mítica del zapato de dragón hasta las tendencias más extravagantes en calzado.</p>
+        </section>
+
+        <section id="historia" class="section">
+            <h2>La Historia Fantástica del Calzado</h2>
+            <p>En el antiguo reino de Shoeville, los zapatos eran más que un accesorio; eran artefactos mágicos. El zapato de dragón, forjado en la época de los dragones, otorgaba la capacidad de volar a quien lo llevaba. Se decía que los zapatos de cristal, creados por el gran hechicero Shoenardo, podían hacerte invisible por un día entero.</p>
+        </section>
+
+        <section id="tipos" class="section">
+            <h2>Tipos de Calzado Mágico</h2>
+            <ul>
+                <li><strong>Zapatos de Dragón:</strong> Permiten volar a grandes alturas.</li>
+                <li><strong>Botas de Teletransportación:</strong> Te llevan instantáneamente a cualquier lugar que imagines.</li>
+                <li><strong>Sandalias de Tiempo:</strong> Permiten viajar al pasado o al futuro con solo un pensamiento.</li>
+                <li><strong>Zapatillas de Invisibilidad:</strong> Te vuelves invisible cuando te pones estas zapatillas.</li>
+            </ul>
+        </section>
+
+        <section id="guia" class="section">
+            <h2>Guía de Tallas Imaginarias</h2>
+            <p>Para encontrar la talla perfecta en el Mundo del Zapato, sigue estos pasos:</p>
+            <ol>
+                <li>Mide tu pie mágico en unidades de "Zapato Mágico" (ZM).</li>
+                <li>Consulta nuestra tabla de tallas mágica para convertir ZM a tu talla real.</li>
+                <li>Recuerda que las tallas pueden variar según el tipo de magia en el calzado.</li>
+            </ol>
+        </section>
+
+        <section id="cuidado" class="section">
+            <h2>Consejos para el Cuidado del Calzado Mágico</h2>
+            <ul>
+                <li>Guarda tus zapatos mágicos en un lugar seco y fresco.</li>
+                <li>Evita exponerlos a la luz directa del sol para preservar su magia.</li>
+                <li>Limpiar con un paño suave y evitar el uso de productos químicos.</li>
+                <li>Realiza un hechizo de mantenimiento al menos una vez al mes para mantener sus propiedades mágicas.</li>
+            </ul>
+        </section>
+
+        <section id="blog" class="blog">
+            <h2>Blog del Mundo del Zapato</h2>
+            <article>
+                <h3>Las Nuevas Tendencias en Calzado Mágico</h3>
+                <p>Este mes, las zapatillas de invisibilidad se han vuelto extremadamente populares entre los aventureros. Con nuevos diseños y características, son ideales para escapar de situaciones complicadas sin ser visto.</p>
+            </article>
+            <article>
+                <h3>Cómo Elegir el Zapato Perfecto para Viajar en el Tiempo</h3>
+                <p>¿Estás pensando en viajar al pasado o al futuro? Aquí tienes algunos consejos sobre cómo elegir las sandalias de tiempo perfectas para tu viaje.</p>
+            </article>
+        </section>
+
+        <section id="contacto" class="contact">
+            <h2>Contacto</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Mundo del Zapato | Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
